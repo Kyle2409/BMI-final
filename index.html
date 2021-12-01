@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BMI</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header"><u>Calculate Your BMI</u></h1>
+        <div class="box">
+        <label for="weight" class="myLabel"><p>Your Weight</p></label><br>
+        <input class="input" type="text" name="weight" id="weight" placeholder="in kilograms (kg)"><br><br>
+    </div>
+    <div class="box">
+        <label class="myLabel" for="height"><p>Your Height</p></label><br>
+        <input class="input" type="text" name="height" id="height" placeholder="in meters (m)"><br><br>
+    </div>
+    <div class="box">
+        <label class="myLabel" for="gender"><p>Gender</p></label>
+        <select name="gender" id="gndr" onclick="disableInput()">
+            <option value="empty"></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label class="myLabel" for="age"><p>Age</p></label>
+        <input class="input" type="text" name="age" id="age" ><br><br>
+        <button id="bmi" onclick="myBMI()">Generate BMI</button><br><br>
+    </div>
+        <!-- <div id="outputBmi"></div> -->
+        <label for="BMI">BMI</label>
+        <input class="input" type="text" id="outputBmi" disabled>
+        <!-- <div id="IdealBmi"></div> -->
+        <div id="secIn">
+        <label for="BMI">Ideal BMI</label>
+        <input class="input" type="text" id="IdealBmi" disabled>
+        </div><br><br>
+        <div id="comment"></div><br>
+        <button id="clear" onclick="clear_inputs()">clear</button>
+        <!-- <button id="exit">&nbsp;</button> -->
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
